@@ -1,29 +1,23 @@
-# Use Node.js image to build the React app
-FROM node:18-alpine AS builder
+FROM node:lts as base
 
-# Install pnpm globally
+ENV FORCE_COLOR=0
+
 RUN npm install -g pnpm
 
-# Set working directory in the container
-WORKDIR /app
+WORKDIR /opt/docusaurus
 
-# Copy package.json and pnpm lock file, then install dependencies
-COPY package.json pnpm-lock.yaml ./
-RUN pnpm install
+FROM base as prod
 
-# Copy all source files and build the React app
-COPY . .
+WORKDIR /opt/docusaurus
+
+COPY . /opt/docusaurus/
+
+RUN pnpm i
+
 RUN pnpm run build
 
-# Use Nginx to serve the static files
-FROM nginx:alpine
+FROM prod as serve
 
-# Copy the build output from the builder stage to Nginx's default directory
-COPY --from=builder /app/build /usr/share/nginx/html
+EXPOSE 3000
 
-# Expose port 80 for the web server
-EXPOSE 80
-
-
-# Start Nginx
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["npm", "run", "serve", "--", "--host", "0.0.0.0", "--no-open"]
