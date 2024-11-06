@@ -7,7 +7,7 @@ services:
       dockerfile: Dockerfile
     container_name: mytonswap_docs
     ports:
-      - ${PORT}:3000
+      - ${PORT}:${PORT}
     env_file:
       - .env
     networks:

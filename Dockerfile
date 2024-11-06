@@ -1,5 +1,4 @@
 FROM node:lts as base
-
 ENV FORCE_COLOR=0
 
 RUN npm install -g pnpm
