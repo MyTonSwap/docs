@@ -1,0 +1,31 @@
+name: Deploy Main Server
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up SSH
+      uses: webfactory/ssh-agent@v0.5.3
+      with:
+        ssh-private-key: ${{ secrets.MAIN_SSH_PRIVATE_KEY }}
+  
+    - name: Deploy to Server
+      env:
+        DEPLOY_USER: ${{ secrets.MAIN_SSH_USER }}
+        DEPLOY_HOST: ${{ secrets.MAIN_SSH_HOST }}
+        DEPLOY_PATH: ${{ secrets.MAIN_SSH_DEPLOY_PATH }}
+      run: |
+        echo $DEPLOY_PATH
+        ssh-keyscan $DEPLOY_HOST >> ~/.ssh/known_hosts
+        rsync -avz -e "ssh -o LogLevel=ERROR -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -o BatchMode=yes" --rsync-path="TERM=xterm rsync" $GITHUB_WORKSPACE/ $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH
+        ssh -o LogLevel=ERROR -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -o BatchMode=yes $DEPLOY_USER@$DEPLOY_HOST "cd $DEPLOY_PATH && docker compose build && docker compose down && docker compose up --build -d"
+
