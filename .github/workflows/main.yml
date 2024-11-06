@@ -26,6 +26,6 @@ jobs:
       run: |
         echo $DEPLOY_PATH
         ssh-keyscan $DEPLOY_HOST >> ~/.ssh/known_hosts
-        rsync -avz -e "ssh -o LogLevel=ERROR -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -o BatchMode=yes" --rsync-path="TERM=xterm rsync" $GITHUB_WORKSPACE/ $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH
+        rsync -avz -e "ssh -o LogLevel=ERROR -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -o BatchMode=yes TERM=xterm" --rsync-path="TERM=xterm rsync" $GITHUB_WORKSPACE/ $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH
         ssh -o LogLevel=ERROR -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -o BatchMode=yes $DEPLOY_USER@$DEPLOY_HOST "cd $DEPLOY_PATH && docker compose build && docker compose down && docker compose up --build -d"
 
