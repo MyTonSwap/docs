@@ -36,7 +36,7 @@ const config: Config = {
             "classic",
             {
                 docs: {
-                    sidebarPath: "./sidebars.ts",
+                    sidebarPath: "./sidebars/sidebars.ts",
                     // Please change this to your repo.
                     // Remove this to remove the "edit this page" links.
                     routeBasePath: "/",
@@ -52,23 +52,32 @@ const config: Config = {
     ],
 
     themeConfig: {
+        colorMode: {
+            defaultMode: "dark",
+        },
         // Replace with your project's social card
         image: "img/docusaurus-social-card.jpg",
         navbar: {
-            title: "My Site",
+            title: "MyTonSwap Docs",
             logo: {
-                alt: "My Site Logo",
-                src: "img/logo.svg",
+                alt: "MyTonSwap Logo",
+                src: "img/mytonswap-logo.png",
             },
             items: [
+                // {
+                //     type: "docSidebar",
+                //     sidebarId: "sdkSidebar",
+                //     position: "left",
+                //     label: "SDK",
+                // },
+                // {
+                //     type: "docSidebar",
+                //     sidebarId: "sdkSidebar",
+                //     position: "left",
+                //     label: "Widget",
+                // },
                 {
-                    type: "docSidebar",
-                    sidebarId: "tutorialSidebar",
-                    position: "left",
-                    label: "Tutorial",
-                },
-                {
-                    href: "https://github.com/facebook/docusaurus",
+                    href: "https://github.com/mytonswap",
                     label: "GitHub",
                     position: "right",
                 },
