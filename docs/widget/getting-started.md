@@ -41,16 +41,14 @@ pnpm add @mytonswap/widget
 You can set up the MyTonSwap Widget in three different ways:
 
 1. [**Plain HTML and JavaScript**](./html)
-2. [**ReactJS**](./guides/react)
-3. [**VueJS**](./guides/vue)
+2. [**ReactJS**](./react)
+3. [**VueJS**](./vue)
 
 Choose the guide that matches your application’s framework to get started.
 
 ## Basic Configuration
 
-The widget provides a simple and flexible API. You can initialize it with default settings or customize it to fit your needs. At a minimum, you should configure:
-
-
+The widget provides a simple and flexible API. You can initialize it with default settings or customize it to fit your needs. At a minimum, you should configure: [**Options**](./options)
 ---
 
 © 2024 MyTonSwap. All rights reserved.

@@ -42,7 +42,7 @@ Get started with the MyTonSwap Widget in just a few steps:
 2. **Import and Configure:** Use the `createSwap` function to set up the widget with your desired settings.
 3. **Customize:** Tailor the widget’s look and feel with custom styles and parameters.
 
-For detailed integration steps, please refer to our [Getting Started Guide](./getting-started).
+For detailed integration steps, please refer to our [Getting Started Guide](./getting-started.md).
 
 
 ## Need Help?

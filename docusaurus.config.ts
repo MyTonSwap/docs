@@ -88,12 +88,12 @@ const config: Config = {
             links: [
                 {
                     title: "Docs",
-                    items: [
-                        {
-                            label: "Tutorial",
-                            to: "/docs/intro",
-                        },
-                    ],
+                    // items: [
+                    //     {
+                    //         label: "Tutorial",
+                    //         to: "/docs/intro",
+                    //     },
+                    // ],
                 },
                 {
                     title: "Community",
