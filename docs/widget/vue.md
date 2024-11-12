@@ -3,18 +3,18 @@ title: VueJS Setup
 description: A step-by-step guide to integrate the MyTonSwap Widget into your Vue.js application.
 sidebar_position: 5
 keywords:
-  - MyTonSwap
-  - Widget
-  - DEX Aggregator
-  - Token Swap
-  - Vue.js
-  - Integration
+    - MyTonSwap
+    - Widget
+    - DEX Aggregator
+    - Token Swap
+    - Vue.js
+    - Integration
 author: MyTonSwap Team
 tags:
-  - setup
-  - guide
-  - vue
-  - javascript
+    - setup
+    - guide
+    - vue
+    - javascript
 ---
 
 # MyTonSwap Widget Example
@@ -50,30 +50,30 @@ In your Vue component, you can integrate the **MyTonSwap Widget** and **TonConne
 ```vue
 <script setup lang="ts">
 import { createSwap } from "@mytonswap/widget";
-import { TonConnectUI } from '@tonconnect/ui';
-import { onMounted, ref } from 'vue';
+import { TonConnectUI } from "@tonconnect/ui";
+import { onMounted, ref } from "vue";
 
 const isMounted = ref(false);
 
 onMounted(() => {
-  if (!isMounted.value) {
-    // Initialize TonConnectUI instance
-    const tonConnectUI = new TonConnectUI({
-      manifestUrl: 'https://mytonswap.com/wallet/manifest.json', // Your manifest URL for TonConnect integration
-    });
+    if (!isMounted.value) {
+        // Initialize TonConnectUI instance
+        const tonConnectUI = new TonConnectUI({
+            manifestUrl: "https://mytonswap.com/wallet/manifest.json", // Your manifest URL for TonConnect integration
+        });
 
-    // Initialize the MyTonSwap Widget
-    createSwap("mytonswap-widget", { tonConnectInstance: tonConnectUI });
+        // Initialize the MyTonSwap Widget
+        createSwap("mytonswap-widget", { tonConnectInstance: tonConnectUI });
 
-    // Mark as mounted to avoid re-initialization
-    isMounted.value = true;
-  }
+        // Mark as mounted to avoid re-initialization
+        isMounted.value = true;
+    }
 });
 </script>
 
 <template>
-  <!-- The div where the MyTonSwap widget will be rendered -->
-  <div id="mytonswap-widget"></div>
+    <!-- The div where the MyTonSwap widget will be rendered -->
+    <div id="mytonswap-widget"></div>
 </template>
 ```
 
@@ -87,6 +87,8 @@ You can customize the appearance of the widget by defining some global CSS varia
 :root {
     --border-color: #f4f4f5;
     --primary-color: #22c55e;
+    --swap-container-background: #f4f4f5;
+    --swap-container-border-color: #ffffff;
     --background-color: #ffffff;
     --input-card-color: #ffffff;
     --input-token-color: #f4f4f5;
@@ -102,22 +104,20 @@ You can customize the appearance of the widget by defining some global CSS varia
 
 These custom styles will affect various elements of the widget, such as background colors, borders, and text. You can further tweak these values to match your application's design.
 
-
 Visit your application in the browser, and you should see the **MyTonSwap Widget** ready for use!
 
 ---
 
 **Additional Notes**:
-- Ensure you are passing the correct `tonConnectInstance` to the widget for wallet connections.
-- You can further customize the widget through additional options passed to `createSwap` in the script.
-- The CSS variables can be modified to better align with your app’s branding and theme.
 
+-   Ensure you are passing the correct `tonConnectInstance` to the widget for wallet connections.
+-   You can further customize the widget through additional options passed to `createSwap` in the script.
+-   The CSS variables can be modified to better align with your app’s branding and theme.
 
 ## Troubleshooting
 
-- **Widget Not Showing**: Ensure the `elementId` matches the ID of the HTML element you’re rendering the widget in.
-- **Styling Issues**: Make sure your defined the css variables and CSS does not conflict with the widget’s default styles.
-
+-   **Widget Not Showing**: Ensure the `elementId` matches the ID of the HTML element you’re rendering the widget in.
+-   **Styling Issues**: Make sure your defined the css variables and CSS does not conflict with the widget’s default styles.
 
 ## Need Help?
 

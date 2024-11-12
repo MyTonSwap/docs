@@ -3,19 +3,19 @@ title: HTML Setup
 description: A simple guide to integrating the MyTonSwap Widget into your web application using plain HTML and JavaScript.
 sidebar_position: 3
 keywords:
-  - MyTonSwap
-  - Widget
-  - DEX Aggregator
-  - Token Swap
-  - HTML
-  - JavaScript
+    - MyTonSwap
+    - Widget
+    - DEX Aggregator
+    - Token Swap
+    - HTML
+    - JavaScript
 author: MyTonSwap Team
 toc: true
 tags:
-  - setup
-  - guide
-  - html
-  - javascript
+    - setup
+    - guide
+    - html
+    - javascript
 ---
 
 # Setting Up MyTonSwap Widget with HTML and JavaScript
@@ -24,8 +24,8 @@ This guide walks you through integrating the **MyTonSwap Widget** into a web pag
 
 ## Prerequisites
 
-- A basic understanding of HTML and JavaScript.
-- An HTML file where you want to embed the widget.
+-   A basic understanding of HTML and JavaScript.
+-   An HTML file where you want to embed the widget.
 
 ## Step 1: Include the MyTonSwap Widget Script
 
@@ -54,16 +54,15 @@ You can place this container anywhere in your HTML where you want the widget to 
 In your JavaScript file or inside a `<script>` tag, use the `createSwap` function to initialize the widget:
 
 ```html
-    <script>
-        const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
-            manifestUrl: 'https://mytonswap.com/wallet/manifest.json',
-        });
-        createSwap("swap-widget", { tonConnectInstance: tonConnectUI });
-    </script>
+<script>
+    const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
+        manifestUrl: "https://mytonswap.com/wallet/manifest.json",
+    });
+    createSwap("swap-widget", { tonConnectInstance: tonConnectUI });
+</script>
 ```
 
 ### Configuration Options
-
 
 ## Step 4: Customize the Widget
 
@@ -74,6 +73,8 @@ You can customize the widget’s appearance using CSS. Here’s an example:
     :root {
         --border-color: #f4f4f5;
         --primary-color: #22c55e;
+        --swap-container-background: #f4f4f5;
+        --swap-container-border-color: #ffffff;
         --background-color: #ffffff;
         --input-card-color: #ffffff;
         --input-token-color: #f4f4f5;
@@ -91,22 +92,22 @@ You can customize the widget’s appearance using CSS. Here’s an example:
 ---
 
 **Additional Notes**:
-- Ensure you are passing the correct `tonConnectInstance` to the widget for wallet connections.
-- You can further customize the widget through additional options passed to `createSwap` in the script.
-- The CSS variables can be modified to better align with your app’s branding and theme.
 
+-   Ensure you are passing the correct `tonConnectInstance` to the widget for wallet connections.
+-   You can further customize the widget through additional options passed to `createSwap` in the script.
+-   The CSS variables can be modified to better align with your app’s branding and theme.
 
 ## Troubleshooting
 
-- **Widget Not Showing**: Ensure the `elementId` matches the ID of the HTML element you’re rendering the widget in.
-- **Styling Issues**: Make sure your defined the css variables and CSS does not conflict with the widget’s default styles.
-
+-   **Widget Not Showing**: Ensure the `elementId` matches the ID of the HTML element you’re rendering the widget in.
+-   **Styling Issues**: Make sure your defined the css variables and CSS does not conflict with the widget’s default styles.
 
 ## Next Steps
 
 For setup in other frameworks, check out:
-- [ReactJS Setup Guide](./react)
-- [VueJS Setup Guide](./vue)
+
+-   [ReactJS Setup Guide](./react)
+-   [VueJS Setup Guide](./vue)
 
 ## Need Help?
 
