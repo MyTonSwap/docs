@@ -33,9 +33,10 @@ You can load the MyTonSwap Widget directly from a CDN. Add the following script 
 
 ```html
 <!-- Include MyTonSwap Widget from CDN -->
-<script type="module"
-        src="https://cdn.jsdelivr.net/npm/@mytonswap/widget@latest/dist/cdn/mytonswap-widget.js"></script>
-<style>
+<script
+    type="module"
+    src="https://cdn.jsdelivr.net/npm/@mytonswap/widget@latest/dist/cdn/mytonswap-widget.js"
+></script>
 ```
 
 ## Step 2: Create an HTML Container
