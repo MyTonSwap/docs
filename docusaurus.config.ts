@@ -5,8 +5,9 @@ import type * as Preset from "@docusaurus/preset-classic";
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-    title: "My Site",
-    tagline: "Dinosaurs are cool",
+    title: "MyTonSwap Docs",
+    tagline:
+        "Building the Future of DeFi on TON: Seamless Integration, Powerful Tools, and Precision at Your Fingertips.",
     favicon: "img/favicon.ico",
 
     // Set the production url of your site here
@@ -17,8 +18,8 @@ const config: Config = {
 
     // GitHub pages deployment config.
     // If you aren't using GitHub pages, you don't need these.
-    organizationName: "facebook", // Usually your GitHub org/user name.
-    projectName: "docusaurus", // Usually your repo name.
+    organizationName: "mytonswap", // Usually your GitHub org/user name.
+    projectName: "docs", // Usually your repo name.
 
     onBrokenLinks: "throw",
     onBrokenMarkdownLinks: "warn",
@@ -64,18 +65,15 @@ const config: Config = {
                 src: "img/mytonswap-logo.png",
             },
             items: [
-                // {
-                //     type: "docSidebar",
-                //     sidebarId: "sdkSidebar",
-                //     position: "left",
-                //     label: "SDK",
-                // },
-                // {
-                //     type: "docSidebar",
-                //     sidebarId: "sdkSidebar",
-                //     position: "left",
-                //     label: "Widget",
-                // },
+                {
+                    type: "doc",
+                    position: "left",
+                    docId: "widget/introduction",
+                    label: "Widget",
+                },
+
+                { to: "sdk/introduction", label: "SDK", position: "left" },
+
                 {
                     href: "https://github.com/mytonswap",
                     label: "GitHub",
@@ -96,19 +94,20 @@ const config: Config = {
                     // ],
                 },
                 {
-                    title: "Community",
+                    title: "Socials",
                     items: [
                         {
-                            label: "Stack Overflow",
-                            href: "https://stackoverflow.com/questions/tagged/docusaurus",
+                            label: "Website",
+                            href: "https://mytonswap.com",
                         },
                         {
-                            label: "Discord",
-                            href: "https://discordapp.com/invite/docusaurus",
+                            label: "Telegram",
+                            href: "https://t.me/MyTonSwap",
                         },
+
                         {
                             label: "X",
-                            href: "https://x.com/docusaurus",
+                            href: "https://x.com/MyTonSwap",
                         },
                     ],
                 },
@@ -117,7 +116,7 @@ const config: Config = {
                     items: [
                         {
                             label: "GitHub",
-                            href: "https://github.com/facebook/docusaurus",
+                            href: "https://github.com/mytonswap",
                         },
                     ],
                 },
