@@ -73,11 +73,17 @@ You can customize the widget’s appearance using CSS. Here’s an example:
     :root {
         --border-color: #f4f4f5;
         --primary-color: #22c55e;
+        --secondary-color: #ebebeb;
+        --background-color: #ffffff;
+        --modal-background-color: #ffffff;
         --swap-container-background: #f4f4f5;
         --swap-container-border-color: #ffffff;
-        --background-color: #ffffff;
         --input-card-color: #ffffff;
+        --input-card-pay-color: #ffffff;
+        --input-card-receive-color: #d0d5dd;
         --input-token-color: #f4f4f5;
+        --change-direction-background-color: #22c55e;
+        --change-direction-icon-color: #f4f4f5;
         --light-shade-color: #f4f4f5;
         --slippage-box-color: #71717a;
         --text-black-color: #000000;
