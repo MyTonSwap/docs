@@ -26,6 +26,8 @@ slug: /
 
 #### 🌐 Demo & Preview : https://widget.mytonswap.com
 
+#### 👨‍💻 Code Example : [HTML](https://github.com/MyTonSwap/widget/tree/main/examples/html), [React](https://github.com/MyTonSwap/widget/tree/main/examples/react), [Vue](https://github.com/MyTonSwap/widget/tree/main/examples/vue)
+
 # MyTonSwap Widget Documentation
 
 Welcome to the **MyTonSwap Widget**—your ultimate solution for integrating the MyTonSwap DEX aggregator directly into your web application. The MyTonSwap Widget provides a seamless and user-friendly interface for swapping tokens on the TON blockchain, while leveraging the best available rates from multiple decentralized exchanges (DEXs).

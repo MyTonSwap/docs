@@ -22,6 +22,8 @@ tags:
 
 This guide walks you through integrating the **MyTonSwap Widget** into a web page using plain HTML and JavaScript. This setup is ideal for projects that do not use frameworks like React or Vue.
 
+👨‍💻 [Code Example](https://github.com/MyTonSwap/widget/tree/main/examples/html)
+
 ## Prerequisites
 
 -   A basic understanding of HTML and JavaScript.

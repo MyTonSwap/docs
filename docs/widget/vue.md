@@ -21,6 +21,8 @@ tags:
 
 **Widget example for Vue.js using a package manager**
 
+👨‍💻 [Code Example](https://github.com/MyTonSwap/widget/tree/main/examples/vue)
+
 ## Install the Widget using a Package Manager
 
 To start, install the **MyTonSwap Widget** using your preferred package manager:
