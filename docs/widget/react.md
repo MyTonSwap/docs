@@ -21,6 +21,8 @@ tags:
 
 This guide will show you how to integrate the **MyTonSwap Widget** into your ReactJS application.
 
+👨‍💻 [Code Example](https://github.com/MyTonSwap/widget/tree/main/examples/react)
+
 ## Prerequisites
 
 -   A ReactJS application (you can create one with `create-react-app` or any other React setup).
