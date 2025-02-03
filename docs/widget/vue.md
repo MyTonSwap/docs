@@ -79,39 +79,6 @@ onMounted(() => {
 </template>
 ```
 
-### Step 2: Add Global Styles
-
-You can customize the appearance of the widget by defining some global CSS variables. For example, in your `global.css` or the relevant CSS file:
-
-#### `global.css` or `index.css`
-
-```css
-:root {
-    --border-color: #f4f4f5;
-    --primary-color: #22c55e;
-    --secondary-color: #ebebeb;
-    --background-color: #ffffff;
-    --modal-background-color: #ffffff;
-    --swap-container-background: #f4f4f5;
-    --swap-container-border-color: #ffffff;
-    --input-card-color: #ffffff;
-    --input-card-pay-color: #ffffff;
-    --input-card-receive-color: #d0d5dd;
-    --input-token-color: #f4f4f5;
-    --change-direction-background-color: #22c55e;
-    --change-direction-icon-color: #f4f4f5;
-    --light-shade-color: #f4f4f5;
-    --slippage-box-color: #71717a;
-    --text-black-color: #000000;
-    --text-white-color: #ffffff;
-    --text-fade-color: #9caacb;
-    --skeleton-shine-color: #9c9c9c;
-    --price-impact-color: #e64646;
-}
-```
-
-These custom styles will affect various elements of the widget, such as background colors, borders, and text. You can further tweak these values to match your application's design.
-
 Visit your application in the browser, and you should see the **MyTonSwap Widget** ready for use!
 
 ---

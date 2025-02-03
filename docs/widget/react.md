@@ -98,31 +98,18 @@ export default App;
 
 ## Step 4: Customize the Widget
 
-You can customize the widget’s appearance with CSS. For instance:
+You can customize the widget’s appearance. For instance:
 
-```css
-:root {
-    --border-color: #f4f4f5;
-    --primary-color: #22c55e;
-    --secondary-color: #ebebeb;
-    --background-color: #ffffff;
-    --modal-background-color: #ffffff;
-    --swap-container-background: #f4f4f5;
-    --swap-container-border-color: #ffffff;
-    --input-card-color: #ffffff;
-    --input-card-pay-color: #ffffff;
-    --input-card-receive-color: #d0d5dd;
-    --input-token-color: #f4f4f5;
-    --change-direction-background-color: #22c55e;
-    --change-direction-icon-color: #f4f4f5;
-    --light-shade-color: #f4f4f5;
-    --slippage-box-color: #71717a;
-    --text-black-color: #000000;
-    --text-white-color: #ffffff;
-    --text-fade-color: #9caacb;
-    --skeleton-shine-color: #9c9c9c;
-    --price-impact-color: #e64646;
-}
+```js
+            createSwap("swap-component", {
+                tonConnectInstance: tc
+                options: {
+                    ui_preferences: {
+                        primary_color: "#1456fb",
+                        dark_color: "#0d1017",
+                    },
+                },
+            });
 ```
 
 Visit your application in the browser, and you should see the **MyTonSwap Widget** ready to perform token swaps!

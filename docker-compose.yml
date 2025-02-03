@@ -1,18 +1,18 @@
-version: '3.9'
+version: "3.9"
 
 services:
-  docs:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: mytonswap_docs
-    ports:
-      - ${PORT}:${PORT}
-    env_file:
-      - .env
-    networks:
-      - mytonswap_network
+    docs:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        container_name: mytonswap_docs
+        ports:
+            - ${PORT}:${PORT}
+        env_file:
+            - .env
+        networks:
+            - mytonswap_network
 
 networks:
-  mytonswap_network:
-    external: true
+    mytonswap_network:
+        external: true
